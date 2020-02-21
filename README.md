@@ -26,16 +26,19 @@ Things you may want to cover:
 # データベース設計
 
 ## usersテーブル
+
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, unique: true|
-|e-mail||null: false, unique:true|
-|passcode|null: false|
+|name|string|null: false, unique: true|
+|e-mail|string|null: false, unique: true|
+|passcode|string|null: false|
+
 ### Association
 - has_many :messages
 - has_many :groups, through: :groups-users
 
 ## messagesテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null:false|
@@ -48,6 +51,7 @@ Things you may want to cover:
 - belongs_to :group
 
 ## groupsテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |group_name|text|null: false,unique :true|
