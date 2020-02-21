@@ -55,9 +55,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false,unique :true|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
+|group|text|null: false,unique :true|
 
 ### Association
 - has_many :messages
