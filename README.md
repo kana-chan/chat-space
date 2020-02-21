@@ -56,11 +56,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group|text|null: false, unique :true|
+|name|string|null: false, unique :true|
 
 ### Association
 - has_many :messages
 - has_many :users, through: :groups_users
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
