@@ -52,6 +52,8 @@ Things you may want to cover:
 ## groups-usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups
