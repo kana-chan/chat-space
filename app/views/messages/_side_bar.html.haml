@@ -1,3 +1,13 @@
 .SideBar
-  .UserInfo
+  .SideTop
+    .SideTop__NameBox
+      .SideTop__NameBox__UserName 
+        おかやま
+      %ul.SideTop__NameBox__menu
+        %li.SideTop__NameBox__menu__edit
+          =link_to "#" do
+            = icon("fas", "edit")
+        %li.SideTop__NameBox__menu__setting 
+          =link_to "#" do
+            = icon("fas","cog")
   .GroupList

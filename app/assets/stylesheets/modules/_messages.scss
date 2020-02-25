@@ -3,12 +3,15 @@
 }
 .wrapper{
   display: flex;
+
+
+
   .MainChat{
     width: calc(100vw - 300px);
-      .GroupInfo{
-        background-color: #ffffff;
-        height: 100px;
-        border-bottom: solid #eeeeee 1px;
+    .GroupInfo{
+      background-color: #ffffff;
+      height: 100px;
+      border-bottom: solid #eeeeee 1px;
       }
       .MessageList{
         background-color: #fafafa;
@@ -19,12 +22,43 @@
         height: 90px;
       }
   }
+
+
+
+  
   .SideBar{
     width: 300px;
-      .UserInfo{
+      .SideTop{
         background-color: #253141;
         height: 100px;
+        display: flex;
+        align-items: center;
+        &__NameBox{
+          height: 16px;
+          width: 260px;
+          line-height: 16px;
+          margin: 0 20px;
+          display: flex;
+          justify-content: space-between;
+          &__UserName{
+            color: #ffffff;
+          }
+          &__menu{
+            width: 60px;
+            display: flex;
+            justify-content: flex-end;
+            a{
+              text-decoration: none;
+              color:#ffffff;
+              margin: 0 5px;
+              &:hover{
+                color: lightgray;
+              }
+            }
+          }
+        }
       }
+
       .GroupList{
         background-color: #2f3e51;
         height: calc(100vh - 100px);
