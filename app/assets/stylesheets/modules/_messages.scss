@@ -67,6 +67,25 @@
       .GroupList{
         background-color: #2f3e51;
         height: calc(100vh - 100px);
+          .group{
+            height: 91px;
+            width: 260px;
+            padding: 20px 20px 0;
+            &__GroupName{
+              color: #ffffff;
+              height: 15px;
+              font-size: 15px;
+              font-weight: bold;
+              line-height: 15px;
+            }
+            &__GroupMessage{
+              color: #ffffff;
+              height: 11px;
+              font-size: 11px;
+              line-height: 11px;
+              margin-top:5px ;
+            }
+          }
       }
   }
 }
