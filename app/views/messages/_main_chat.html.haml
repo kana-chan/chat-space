@@ -1,4 +1,16 @@
 .MainChat
-  .GroupInfo
+  .MainTop
+    .GroupInfo
+      .GroupInfo__GroupName
+        岡山家
+      %ul.GroupInfo__MemberList
+        Member : 
+        %li.GroupInfo__MemberList__first
+          かなた
+        %li.GroupInfo__MemberList__second
+          みゆ
+    =link_to "#",class:"EditBtn" do
+      .EditBox
+        Edit
   .MessageList
   .MessageForm
