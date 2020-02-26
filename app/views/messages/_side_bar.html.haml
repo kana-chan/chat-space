@@ -1,0 +1,23 @@
+.sideBar
+  .sideTop
+    .sideTop__nameBox
+      .sideTop__nameBox__userName 
+        おかやま
+      %ul.sideTop__nameBox__menu
+        %li.sideTop__nameBox__menu__edit
+          =link_to "#" do
+            = icon("fas", "edit")
+        %li.sideTop__nameBox__menu__setting 
+          =link_to "#" do
+            = icon("fas","cog")
+  .groupList
+    .group
+      .group__groupName
+        グループ1
+      .group__groupMessage
+        メッセージなし
+    .group
+      .group__groupName
+        グループ2
+      .group__groupMessage
+        メッセージなし
