@@ -59,7 +59,6 @@
   }
 }
 
-
 .messageList{
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
@@ -95,7 +94,6 @@
   display: flex;
   align-items: center;
   padding: 20px 40px;
-
   &__formBox{
     width: 100%;
     display: flex;
@@ -131,9 +129,6 @@
     cursor: pointer;
   }
 }
-
-
-
 // サイドバー部分--------------------------------------------------
 .sideBar{
   width: 300px;
