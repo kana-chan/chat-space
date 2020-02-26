@@ -1,33 +1,39 @@
-.MainChat
-  .MainTop
-    .GroupInfo
-      .GroupInfo__GroupName
+.mainChat
+  .mainTop
+    .groupInfo
+      .groupInfo__groupName
         岡山家
-      %ul.GroupInfo__MemberList
+      %ul.groupInfo__memberList
         Member : 
-        %li.GroupInfo__MemberList__first
+        %li.groupInfo__memberList__first
           かなた
-        %li.GroupInfo__MemberList__second
+        %li.groupInfo__memberList__second
           みゆ
-    =link_to "#",class:"EditBtn" do
-      .EditBox
+    =link_to "#",class:"editBtn" do
+      .editBox
         Edit
 
-  .MessageList
-    .MessageInfo
-      .MessageInfo__UserName
+  .messageList
+    .messageInfo
+      .messageInfo__userName
         かなた
-      .MessageInfo__PostDate
+      .messageInfo__postDate
         2020/01/02(tue)17:17:22
     .message
       おはよう
-      
-    .MessageInfo
-      .MessageInfo__UserName
+
+    .messageInfo
+      .messageInfo__userName
         みゆ
-      .MessageInfo__PostDate
+      .messageInfo__postDate
         2020/01/02(tue)18:17:22
     .message
       こんばんちゃ
 
-  .MessageForm
+  %form.messageForm
+    .messageForm__formBox
+      %input{type:"text",placeholder:" type a message!!",class:"messageForm__formBox__textBox"}
+      %label{class:"messageForm__formBox__photoBtn"}
+        =icon("fas","image")
+        %input{type:"file",class:"messageForm__formBox__photoBtn--extra"}
+    %input{type:"submit",value:"Send",class:"messageForm__sendBtn"}

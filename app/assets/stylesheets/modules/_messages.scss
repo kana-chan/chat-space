@@ -1,32 +1,32 @@
 *{
   box-sizing: border-box;
 }
-
 .wrapper{
   display: flex;
 }
 
-.MainChat{
+// メインチャット部分--------------------------------------------------
+.mainChat{
   width: calc(100vw - 300px);
 }
 
-.MainTop{
-background-color: #ffffff;
-height: 100px;
-border-bottom: solid #eeeeee 1px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 40px;
+.mainTop{
+  background-color: #ffffff;
+  height: 100px;
+  border-bottom: solid #eeeeee 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
-.GroupInfo{
-  &__GroupName{
+.groupInfo{
+  &__groupName{
     color: #333333;
     font-size: 20px;
     margin-top: 35px;
   }
-  &__MemberList{
+  &__memberList{
     display: flex;
     color: #999999;
     font-size: 12px;
@@ -37,13 +37,13 @@ padding: 0 40px;
   }
 }
 
-.EditBtn{
+.editBtn{
   color: #38aef0;
   font-size: 16px;
   text-decoration: none;
 }
 
-.EditBox{
+.editBox{
   height: 40px;
   width:72px;
   border: solid 1px #38aef0;
@@ -60,23 +60,23 @@ padding: 0 40px;
 }
 
 
-.MessageList{
+.messageList{
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
   padding-left: 40px;
 }
 
-.MessageInfo{
+.messageInfo{
   padding-top: 35px;
   width:100% ;
   display: flex;
   justify-content: flex-start;
-  &__UserName{
+  &__userName{
     color: #333333;
     font-size: 16px;
     padding-bottom: 12px;
   }
-  &__PostDate{
+  &__postDate{
     color: #999999;
     font-size: 12px;
     padding-left: 5px;
@@ -89,28 +89,69 @@ padding: 0 40px;
   padding-bottom: 46px - 35px;
 }
 
-.MessageForm{
+.messageForm{
   background-color: #d2d2d2;
   height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+
+  &__formBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__textBox{
+      width:100%;
+      height: 50px;
+      border-style: none;
+      padding-left:10px;
+      padding-right: 40px;
+    }
+    &__photoBtn{
+      font-size: 25px;
+      color: #999999;
+      cursor: pointer;
+      position: absolute;
+        top: 10px;
+        right: 10px;
+      &--extra{
+        display: none;
+      }
+    }
+  }
+  &__sendBtn{
+    width: 80px;
+    height: 50px;
+    background-color:#38aef0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px;
+    cursor: pointer;
+  }
 }
 
-.SideBar{
+
+
+// サイドバー部分--------------------------------------------------
+.sideBar{
   width: 300px;
 }
 
-.SideTop{
+.sideTop{
   background-color: #253141;
   height: 100px;
   display: flex;
   align-items: center;
-  &__NameBox{
+  &__nameBox{
     height: 16px;
     width: 260px;
     line-height: 16px;
     margin: 0 20px;
     display: flex;
     justify-content: space-between;
-    &__UserName{
+    &__userName{
       color: #ffffff;
     }
     &__menu{
@@ -134,7 +175,7 @@ padding: 0 40px;
   }
 }
 
-.GroupList{
+.groupList{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
 }
@@ -143,14 +184,14 @@ padding: 0 40px;
   height: 91px;
   width: 260px;
   padding: 20px 20px 0;
-  &__GroupName{
+  &__groupName{
     color: #ffffff;
     height: 15px;
     font-size: 15px;
     font-weight: bold;
     line-height: 15px;
   }
-  &__GroupMessage{
+  &__groupMessage{
     color: #ffffff;
     height: 11px;
     font-size: 11px;
@@ -158,5 +199,3 @@ padding: 0 40px;
     margin-top:5px ;
   }
 }
-
-
