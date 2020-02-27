@@ -1,2 +1,0 @@
-class Gloup < ApplicationRecord
-end
