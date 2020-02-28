@@ -5,19 +5,16 @@
         = current_user.name
       %ul.sideTop__nameBox__menu
         %li.sideTop__nameBox__menu__edit
-          =link_to "#" do
+          =link_to new_group_path do
             = icon("fas", "edit")
         %li.sideTop__nameBox__menu__setting 
-          = link_to edit_user_path(current_user) do
+          = link_to edit_user_path(current_user.id) do
             = icon("fas","cog")
   .groupList
-    .group
-      .group__groupName
-        グループ1
-      .group__groupMessage
-        メッセージなし
-    .group
-      .group__groupName
-        グループ2
-      .group__groupMessage
-        メッセージなし
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .group__groupName
+            = group.name
+          .group__groupMessage
+            メッセージなし
