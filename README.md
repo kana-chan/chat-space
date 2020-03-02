@@ -42,7 +42,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|content|string||
 |image|string||
 |user|refarences|null: false, foreign_key :true|
 |group|refarences|null: false, foreign_key :true|
