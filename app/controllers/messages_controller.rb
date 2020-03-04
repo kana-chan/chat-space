@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-# resources
+# resources---------------------------------------------------------------------------
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
@@ -12,4 +12,11 @@ class MessagesController < ApplicationController
 
   def create
   end
+
+# private---------------------------------------------------------------------------
+  private
+  def message_params
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+  end
+
 end
