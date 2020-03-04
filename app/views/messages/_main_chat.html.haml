@@ -9,7 +9,7 @@
           - @group.users.each do |user|
             = user.name
 
-    =link_to "#",class:"editBtn" do
+    =link_to edit_group_path(@group.id),class:"editBtn" do
       .editBox
         Edit
 
