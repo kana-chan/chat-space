@@ -14,21 +14,7 @@
         Edit
 
   .messageList
-    .messageInfo
-      .messageInfo__userName
-        かなた
-      .messageInfo__postDate
-        2020/01/02(tue)17:17:22
-    .message
-      おはよう
-
-    .messageInfo
-      .messageInfo__userName
-        みゆ
-      .messageInfo__postDate
-        2020/01/02(tue)18:17:22
-    .message
-      こんばんちゃ
+    = render partial: "message", collection: @messages 
 
   = form_for [@group, @message] ,html:{class:"messageForm"} do |f|
     .messageForm__formBox
