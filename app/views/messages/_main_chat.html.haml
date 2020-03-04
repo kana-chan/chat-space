@@ -30,10 +30,10 @@
     .message
       こんばんちゃ
 
-  %form.messageForm
+  = form_for [@group, @message] ,html:{class:"messageForm"} do |f|
     .messageForm__formBox
-      %input{type:"text",placeholder:" type a message!!",class:"messageForm__formBox__textBox"}
-      %label{class:"messageForm__formBox__photoBtn"}
-        =icon("fas","image")
-        %input{type:"file",class:"messageForm__formBox__photoBtn--extra"}
-    %input{type:"submit",value:"Send",class:"messageForm__sendBtn"}
+      = f.text_field :content, class: 'messageForm__formBox__textBox', placeholder: 'type a message'
+      = f.label :image, class: 'messageForm__formBox__photoBtn' do
+        = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'messageForm__formBox__photoBtn--extra'
+    = f.submit 'Send', class: 'messageForm__sendBtn'
