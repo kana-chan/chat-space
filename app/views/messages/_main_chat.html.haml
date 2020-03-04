@@ -2,13 +2,13 @@
   .mainTop
     .groupInfo
       .groupInfo__groupName
-        岡山家
+        = @group.name
       %ul.groupInfo__memberList
         Member : 
         %li.groupInfo__memberList__first
-          かなた
-        %li.groupInfo__memberList__second
-          みゆ
+          - @group.users.each do |user|
+            = user.name
+
     =link_to "#",class:"editBtn" do
       .editBox
         Edit
