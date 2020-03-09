@@ -59,10 +59,11 @@ function buildHTML(message){
       $('.messageList').append(html);
       $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
       $('form')[0].reset();
-      $('.messageForm__sendBtn').prop('disabled',false);
     })
     .fail(function(){
       alert("メッセージの送信に失敗しました");
+    })
+    .always(function(){
       $('.messageForm__sendBtn').prop('disabled',false);
     });
   });
