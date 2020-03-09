@@ -59,6 +59,7 @@ function buildHTML(message){
       $('.messageList').append(html);
       $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
       $('form')[0].reset();
+      $('.messageForm__sendBtn').prop('disabled',false);
     })
   });
 });
