@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+  def index
+    respond_to do |f|
+      f.html
+      f.json
+    end
+  end
+
   def edit
   end
 
