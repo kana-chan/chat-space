@@ -63,6 +63,7 @@ function buildHTML(message){
     })
     .fail(function(){
       alert("メッセージの送信に失敗しました");
+      $('.messageForm__sendBtn').prop('disabled',false);
     });
   });
 });
