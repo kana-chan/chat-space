@@ -63,6 +63,6 @@ function buildHTML(message){
     })
     .fail(function(){
       alert("メッセージの送信に失敗しました");
-    })
+    });
   });
 });
