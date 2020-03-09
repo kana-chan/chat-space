@@ -61,5 +61,8 @@ function buildHTML(message){
       $('form')[0].reset();
       $('.messageForm__sendBtn').prop('disabled',false);
     })
+    .fail(function(){
+      alert("メッセージの送信に失敗しました");
+    })
   });
 });
