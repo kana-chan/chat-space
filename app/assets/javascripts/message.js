@@ -6,7 +6,7 @@ function buildHTML(message){
       <div class="messageItem">
         <div class="messageInfo">
           <div class="messageInfo__userName">
-            ${message.user.name}
+            ${message.user_name}
           </div>
           <div class="messageInfo__postDate">
             ${message.created_at}
@@ -21,11 +21,11 @@ function buildHTML(message){
       </div> `
     return html;
   }else{
-    var html =`
+    var html = `
     <div class="messageItem">
         <div class="messageInfo">
           <div class="messageInfo__userName">
-            ${message.user.name}
+            ${message.user_name}
           </div>
           <div class="messageInfo__postDate">
             ${message.created_at}
@@ -56,9 +56,8 @@ function buildHTML(message){
 // ---------------------------------------------------------------------------
     .done(function(data){
       var html = buildHTML(data);
-    })
-    .fale(function(){
-
+      $('.messageList').append(html);
+      $('form')[0].reset();
     })
   });
 });
