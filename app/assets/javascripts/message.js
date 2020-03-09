@@ -57,6 +57,7 @@ function buildHTML(message){
     .done(function(data){
       var html = buildHTML(data);
       $('.messageList').append(html);
+      $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
       $('form')[0].reset();
     })
   });
