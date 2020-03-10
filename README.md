@@ -71,8 +71,3 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-_message.html.hamlにカリキュラムと異なる箇所あり
-メッセージの条件分岐の記載方法
-メッセージにクラスを与えていない
-（カリキュラムー問題5）
