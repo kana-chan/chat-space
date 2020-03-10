@@ -71,7 +71,6 @@ $('#new_message').on('submit',function(e){
 // other------------------------------------------------------------------------------------------------------------------------------------------------------
   function reloadMessages(){
     var last_message_id = $('.messageItem:last').data('message-id');
-    console.log(last_message_id)
 // ajax------------------------------------------------
   $.ajax({
     url: 'api/messages',
